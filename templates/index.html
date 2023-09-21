@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Cupcakes</title>
+    <link rel="stylesheet" href="/static/cupcakes.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="text-center display-3">Cupcake List</h1>
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <ul class="list-group">
+                </ul>
+            </div>
+        </div>
+    </div><br>
+    <h3 class="text-left ml-5 display-5">New Cupcake</h3>
+
+    <div class="container">
+        <div class="form-group row">
+            <label for="flavor" class="col-sm-2 col-form-label">Flavor</label>
+            <div class="col-sm-10">
+                <input type='text' class='form-control' name="flavor" id='flavor' required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="size" class="col-sm-2 col-form-label">Size</label>
+            <div class="col-sm-10">
+                <select name="size" id="size" required>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="rating" class="col-sm-2 col-form-label">Rating</label>
+            <div class="col-sm-10">
+                <input type="number" required class="form-control" id="rating" name="rating">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="image" class="col-sm-2 col-form-label">Image</label>
+            <div class="col-sm-10">
+                <input type="text" required class="form-control" id="image" name="image">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="ml-auto mr-3">
+                <button type="submit" class="btn btn-success add-cupcake">Add</button>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+            integrity="sha256-T/f7Sju1ZfNNfBh7skWn0idlCBcI3RwdLSS4/I7NQKQ=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="static/cupcakes.js"></script>
+    </div>
+</body>
+
+</html>
