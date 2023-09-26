@@ -34,10 +34,16 @@ def get_cupcake(id):
 @app.route('/api/cupcakes', methods=["POST"])
 def create_cupcake():
     """Creates a new cupcake and returns JSON of that created cupcake"""
-    new_cupcake = Cupcake(
+    if len(request.json.get("image")) > 0:
+        new_cupcake = Cupcake(
         flavor=request.json["flavor"], 
-        size=request.json["size"],
-        image=request.json.get("image"),
+        size=request.json["size"],        
+        image = request.json.get("image"),
+        rating=request.json["rating"])
+    else:
+        new_cupcake = Cupcake(
+        flavor=request.json["flavor"], 
+        size=request.json["size"],        
         rating=request.json["rating"])
     db.session.add(new_cupcake)
     db.session.commit()
